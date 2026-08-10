@@ -4,3 +4,18 @@ langchain-huggingface
 langchain-text-splitters
 faiss-cpu
 sentence-transformers
+llama-index
+llama-index-llms-google-genai
+llama-index-embeddings-google-genai
+llama-index-vector-stores-qdrant
+llama-index-readers-file
+# NOTE: llama-index-vector-stores-qdrant 0.10.2 declares qdrant-client>=1.16.0
+# as a requirement, but as of this writing that combination is actually
+# broken (ImportError: cannot import name 'IDF_EMBEDDING_MODELS' from
+# qdrant_client.qdrant_fastembed). Pin qdrant-client below 1.16 until the
+# integration package catches up; re-check upstream before unpinning.
+qdrant-client>=1.16.0
+fastembed
+tenacity
+pypdf
+pytest
